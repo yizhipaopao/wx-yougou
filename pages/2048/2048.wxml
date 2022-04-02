@@ -1,0 +1,38 @@
+<view class="game-container">
+    <view class="header">
+      	<text class="title">2048</text>
+      	<view class="scores-container">
+        	<view class="score-container">
+                <view>SCORE</view>
+                <view>{{score}}</view>
+            </view>
+      		<view class="best-container">
+                <view>BEST</view>
+                <view>{{maxScore}}</view>
+            </view>
+      	</view>
+    </view>
+    <view class="above-game">
+      <text class="game-intro">Challenge it and get to 2048 tile!</text>
+      <button class="newGameBtn" bindtap="handleNewGame">New Game</button>
+    </view>
+
+    <view class="grid-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+        <view class="game-process {{overMsg}}" wx:if="{{overMsg}}">
+            <text class="msg">{{over?'Game Over!':'Congratulations!'}}</text>
+            <button class="process-btn" bindtap="handleGameProcess">{{over?'Try Again':'Keep Playing'}}</button>
+        </view>
+
+        <view wx:for="{{grid}}" wx:for-index="rowIdx" wx:key="rowIdx" wx:for-item="row" class="grid-row">
+            <view wx:for="{{row}}" wx:for-index="colIdx" wx:key="colIdx" wx:for-item="cell" class="grid-cell">
+                <view class="tile tile-{{cell.value}}">
+                    <view wx:if="{{cell.value}}" class="tile-inner">
+                        {{cell.value}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</view>

@@ -1,0 +1,220 @@
+/* @import 'https://rsms.me/inter/inter.css'; */
+page{
+    background: rgb(251, 248, 241);
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    height: 100%;
+    position: fixed;
+    /* font-family: 'Inter', sans-serif; */
+}
+.game-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40rpx;
+}
+.header .title{
+    flex: 0 0 20%;
+    font-size: 60rpx;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(117, 110, 102);
+    font-weight: bold;
+}
+.header .scores-container{
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: space-between;
+}
+.score-container, .best-container{
+    flex: 0 0 20%;
+    background-color: rgb(186, 173, 161);
+    padding: 15rpx 25rpx;
+    border-radius: 7rpx;
+    text-align: center;
+}
+
+.score-container view:nth-child(1), .best-container view:nth-child(1){
+    font-size: 25rpx;
+    font-weight: bold;
+    color: rgb(236, 228, 219);
+    /* padding: 15rpx 25rpx; */
+    padding-bottom: 0;
+
+
+}
+.score-container view:nth-child(2), .best-container view:nth-child(2){
+    margin-top: 10rpx;
+    font-size: 36rpx;
+    font-weight:bolder;
+    color: white;
+    /* padding-bottom: 20rpx; */
+}
+.above-game{
+    display: flex;
+    margin-top: 15rpx;
+    align-items: center;
+}
+.game-intro{
+    font-size: 30rpx;
+    flex: 0 0 60%;
+    color:#776e65;
+    font-weight: 400;
+    line-height: 150%;
+}
+.newGameBtn{
+    flex: 0 0 40%;
+    background-color: rgb(140, 123, 104);
+    font-size: 30rpx;
+    padding:20rpx;
+    color:white;
+}
+.game-process{
+    position: absolute;
+    width: 60%;
+    border-radius: 5rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    padding:30rpx;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:space-between;
+}
+.over{
+    background-color: rgb(53, 46, 46);
+}
+.won{
+    background-color:rgb(194, 112, 112);
+}
+.msg{
+    flex: 0 0 100%;
+    font-size: 40rpx;
+    margin-bottom: 30rpx;
+}
+.process-btn{
+    flex: 0 0 100%;
+    width: 50%;
+}
+.grid-container{
+    width: 94%;
+    height: 74vw;
+    margin-top: 40rpx;
+    padding: 3%; 
+    background-color: rgb(185, 173, 161);
+    border-radius: 10rpx;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.grid-row {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 22.75%;
+    margin-bottom: 3%; 
+    /* background-color: aqua; */
+}
+.grid-row:last-child {
+    margin-bottom: 0; }
+.grid-row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.grid-cell {
+    width: 22.75%;
+    height: 100%;
+    margin-right: 3%;
+    float: left;
+    border-radius: 5rpx;
+    background: rgba(238, 228, 218, 0.35); }
+.grid-cell:last-child {
+      margin-right: 0; 
+}
+.tile{
+    width: 100%;
+    height: 100%;  
+    font-size: 50rpx; 
+    font-weight: bold;
+}  
+.tile .tile-inner{
+    width: 100%;
+    height: 100%;
+    border-radius: 5rpx;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.tile-2 .tile-inner{
+    color: #776e65;
+    background: #eee4da;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); 
+}
+.tile-4 .tile-inner {
+    color: #776e65;
+    background: #ede0c8;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); 
+}
+.tile-8 .tile-inner {
+    color: #f9f6f2;
+    background: #f2b179; 
+}
+.tile.tile-16 .tile-inner {
+    color: #f9f6f2;
+    background: #f59563; 
+}
+.tile.tile-32 .tile-inner {
+    color: #f9f6f2;
+    background: #f67c5f; 
+}
+.tile.tile-64 .tile-inner {
+    color: #f9f6f2;
+    background: #f65e3b; 
+}
+.tile.tile-128 .tile-inner {
+    color: #f9f6f2;
+    background: #edcf72;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    font-size: 45rpx; 
+}
+.tile.tile-256 .tile-inner {
+    color: #f9f6f2;
+    background: #edcc61;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    font-size: 45rpx; 
+}
+.tile.tile-512 .tile-inner {
+    color: #f9f6f2;
+    background: #edc850;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    font-size: 45rpx; 
+}
+.tile.tile-1024 .tile-inner {
+    color: #f9f6f2;
+    background: #edc53f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    font-size: 40rpx; 
+}
+.tile.tile-2048 .tile-inner {
+    color: #f9f6f2;
+    background: #a6bc;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 40rpx; 
+}
+.tile.tile-4096 .tile-inner {
+    color: white;
+    background: rgb(149, 97, 176);
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 40rpx; 
+}
+.tile.tile-8192 .tile-inner {
+    color: white;
+    background: rgb(93, 59, 111);
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 40rpx; 
+}
