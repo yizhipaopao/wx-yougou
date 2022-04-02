@@ -4,5 +4,5 @@
 
 ---
 
-[小程序官方文档]([image | 微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/component/image.html))
+[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 
